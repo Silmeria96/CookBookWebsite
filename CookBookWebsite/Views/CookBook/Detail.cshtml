@@ -1,0 +1,332 @@
+﻿@model CookBookWebsite.Models.CookBook
+@{
+    ViewBag.Title = "Detail";
+}
+
+<style>
+    .cookbook-img {
+        margin-bottom: 10px;
+    }
+
+    .cookbook-material-item {
+        float: left;
+        width: calc(25% - 10px);
+        margin: 0 5px 5px 5px;
+        text-align: center;
+    }
+
+        .cookbook-material-item .name {
+            font-size: 20px;
+        }
+
+        .cookbook-material-item .value {
+            color: gray;
+        }
+
+    .cookbook-step-item {
+        margin-bottom: 10px;
+    }
+
+        .cookbook-step-item .step-text {
+            font-size: 20px;
+        }
+
+    .ranking-list-item {
+        margin-bottom: 10px;
+        padding: 5px;
+        border: 1px solid lightgray;
+    }
+
+    .cookbook-step-item .step-order {
+        margin-top: 0;
+    }
+
+    .create-comment-area {
+        margin-bottom: 10px;
+    }
+
+    .comment-item .comment-left {
+        text-align: center;
+    }
+
+    .comment-item .comment-user-head {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        text-align: center;
+        margin-bottom: 5px;
+        border: 1px solid lightgray;
+    }
+</style>
+
+
+<div class="row main-row">
+    <div class="col-md-8">
+        <div class="cookbook-basic-info">
+            <h1 id="cookbook-title">@Model.Title</h1>
+            <img class="img-responsive cookbook-img" style="max-height:400px;" src=@Model.Image alt="Thumbnail" />
+            <p>@Model.Content</p>
+            <div class="btn-group btn-group-lg">
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-heart"></span>
+                    <span>赞一个</span>
+                </button>
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                    <span>添加收藏</span>
+                </button>
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                    <span>加入购物车</span>
+                </button>
+            </div>
+        </div>
+        <div class="cookbook-material-info">
+            <h3>食材明细</h3>
+            <div class="material-level-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            主料
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        @{
+                            foreach (var material in Model.Materials)
+                            {
+                                if (material.Level == 3)
+                                {
+                                    <div class="cookbook-material-item">
+                                        <p class="name">@material.Name</p>
+                                        <p class="value">
+                                            <span class="amount">@material.Amount</span>
+                                        </p>
+                                    </div>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="material-level-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            辅料
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        @{
+                            foreach (var material in Model.Materials)
+                            {
+                                if (material.Level == 2)
+                                {
+                                    <div class="cookbook-material-item">
+                                        <p class="name">@material.Name</p>
+                                        <p class="value">
+                                            <span class="amount">@material.Amount</span>
+                                        </p>
+                                    </div>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="material-level-1">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            其它
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        @{
+                            foreach (var material in Model.Materials)
+                            {
+                                if (material.Level == 1)
+                                {
+                                    <div class="cookbook-material-item">
+                                        <p class="name">@material.Name</p>
+                                        <p class="value">
+                                            <span class="amount">@material.Amount</span>
+                                        </p>
+                                    </div>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cookbook-step-info">
+            <h3><span>@Model.Title</span>的做法步骤</h3>
+            @{
+                foreach (var step in Model.Steps)
+                {
+                    <div class="cookbook-step-item">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <img class="step-img img-responsive center-block" src=@step.ImageUrl alt="Alternate Text" />
+                            </div>
+                            <div class="col-xs-8">
+                                <h3 class="step-order">@step.OrderID</h3>
+                                <p class="step-text">@step.Content</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h3>最受欢迎的菜谱排行榜</h3>
+        <div class="cookbook-ranking-list">
+            <div class="ranking-list-item">
+                <a href="#">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <img class="img-responsive" src="~/Images/Index/cookbook-1.jpg" alt="Alternate Text" />
+                        </div>
+                        <div class="col-xs-4">
+                            <p>鱼香肉丝</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row comment-row">
+    <div class="col-md-12">
+        <h3>最新评论</h3>
+    </div>
+    <div class="col-md-12">
+        <div class="create-comment-area" id="create-comment-area">
+            <div class="row">
+                <div class="col-md-12">
+                    <form id="comment-form" role="form">
+                        <div class="form-group">
+                            <textarea class="form-control comment-input" id="comment-input" name="content" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control account-input" id="account-input" name="account" value="user1" style="display:none;" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control cookbookid-input" id="account-input" name="cookbookid" value=@Model.ID style="display:none;" />
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-default" id="btnSendComment">发表评论</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div id="comment-list">
+            @{
+                foreach (var comment in Model.Comments)
+                {
+                    <div class="comment-item">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <div class="comment-left">
+                                            <img class="comment-user-head" src="/Images/Index/cookbook-1.jpg" alt="Alternate Text" />
+                                            <p>@comment.CreateUser.Name</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-10">
+                                        <div class="comment-right">
+                                            <p>@comment.Content</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(function () {
+
+            // 发表评论
+            $("#btnSendComment").on("click", function () {
+                $.ajax({
+                    type: 'post',
+                    url: '/CookBook/CreateComment',
+                    data: $("#comment-form").serialize(),
+                    success: function (data) {
+                        var result = eval('(' + data + ')');
+                        if (result.flag) {
+                            alert(result.msg);
+                            Refresh_Comment_List();
+                        }
+                        else {
+                            alert("发表评论失败，请与管理员联系");
+                        }
+                    },
+                    error: function (error) {
+                        alert("发表评论发生错误，请与管理员联系");
+                    }
+                })
+            });
+
+            // 刷新评论区域
+            function Refresh_Comment_List() {
+                $.ajax({
+                    type: 'get',
+                    url: '/CookBook/GetCommentList',
+                    data: {
+                        id: '@Model.ID'
+                    },
+                    success: function (data) {
+                        var result = eval('(' + data + ')');
+
+                        if (result.flag) {
+                            var comments = eval('(' + result.comments + ')');
+                            $("#comment-list").empty();
+                            $.each(comments, function (index, item) {
+                                $("#comment-list").append('<div class="comment-item">' +
+                                    '<div class="panel panel-default">' +
+                                        '<div class="panel-body">' +
+                                            '<div class="row">' +
+                                                '<div class="col-xs-2">' +
+                                                    '<div class="comment-left">' +
+                                                        '<img class="comment-user-head" src="/Images/Index/cookbook-1.jpg" alt="Alternate Text" />' +
+                                                        '<p>' + item.CreateUser + '</p>' +
+                                                        '<p>' + item.CreateDate + '</p>' +
+                                                    '</div>' +
+                                                '</div>' +
+                                                '<div class="col-xs-10">' +
+                                                    '<div class="comment-right">' +
+                                                        '<p>' + item.Comment + '</p>' +
+                                                    '</div>' +
+                                                '</div>' +
+                                            '</div>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>');
+                            });
+                        }
+                        else {
+                            alert("刷新评论失败，请与管理员联系");
+                        }
+                    },
+                    error: function (error) {
+                        alert("刷新评论发生错误，请与管理员联系");
+                        console.log(error);
+                    }
+                });
+            };
+
+        })
+    </script>
+}

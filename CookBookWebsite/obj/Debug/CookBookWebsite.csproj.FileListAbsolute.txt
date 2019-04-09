@@ -1,0 +1,175 @@
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\roslyn\csc.exe
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\roslyn\Microsoft.CodeAnalysis.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\roslyn\Microsoft.CSharp.Core.targets
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\roslyn\Microsoft.VisualBasic.Core.targets
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\roslyn\System.Collections.Immutable.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\roslyn\System.Reflection.Metadata.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\roslyn\vbc.exe
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\roslyn\VBCSCompiler.exe
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\roslyn\VBCSCompiler.exe.config
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\CookBookWebsite.dll.config
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\CookBookWebsite.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\CookBookWebsite.pdb
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Antlr3.Runtime.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\EntityFramework.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\EntityFramework.SqlServer.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.AspNet.Identity.Core.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.AspNet.Identity.Owin.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Host.SystemWeb.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.Cookies.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.Facebook.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.Google.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.OAuth.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.Twitter.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Web.Infrastructure.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Newtonsoft.Json.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Owin.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\System.Web.Helpers.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\System.Web.Mvc.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\System.Web.Optimization.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\System.Web.Razor.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\System.Web.WebPages.Deployment.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\System.Web.WebPages.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\System.Web.WebPages.Razor.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\WebGrease.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\System.Web.Helpers.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\System.Web.Mvc.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\System.Web.Optimization.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\System.Web.Razor.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\System.Web.WebPages.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\System.Web.WebPages.Deployment.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\System.Web.WebPages.Razor.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Antlr3.Runtime.pdb
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Newtonsoft.Json.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\EntityFramework.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\EntityFramework.SqlServer.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.AspNet.Identity.Core.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.AspNet.Identity.Owin.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Host.SystemWeb.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.Facebook.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.Cookies.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.OAuth.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.Google.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.Twitter.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\System.Web.Helpers.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\System.Web.Mvc.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\System.Web.Optimization.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\System.Web.Razor.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\System.Web.WebPages.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\EntityFramework.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Host.SystemWeb.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Security.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Security.Facebook.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Security.Google.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Security.Twitter.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\obj\Debug\CookBookWebsite.dll
+d:\backup\documents\visual studio 2015\Projects\CookBookWebsite\CookBookWebsite\obj\Debug\CookBookWebsite.pdb
+G:\CookBookWebsite\CookBookWebsite\bin\roslyn\csc.exe
+G:\CookBookWebsite\CookBookWebsite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\CookBookWebsite\CookBookWebsite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\CookBookWebsite\CookBookWebsite\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\CookBookWebsite\CookBookWebsite\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\CookBookWebsite\CookBookWebsite\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\CookBookWebsite\CookBookWebsite\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\CookBookWebsite\CookBookWebsite\bin\roslyn\System.Collections.Immutable.dll
+G:\CookBookWebsite\CookBookWebsite\bin\roslyn\System.Reflection.Metadata.dll
+G:\CookBookWebsite\CookBookWebsite\bin\roslyn\vbc.exe
+G:\CookBookWebsite\CookBookWebsite\bin\roslyn\VBCSCompiler.exe
+G:\CookBookWebsite\CookBookWebsite\bin\roslyn\VBCSCompiler.exe.config
+G:\CookBookWebsite\CookBookWebsite\bin\CookBookWebsite.dll.config
+G:\CookBookWebsite\CookBookWebsite\bin\CookBookWebsite.dll
+G:\CookBookWebsite\CookBookWebsite\bin\CookBookWebsite.pdb
+G:\CookBookWebsite\CookBookWebsite\bin\Antlr3.Runtime.dll
+G:\CookBookWebsite\CookBookWebsite\bin\EntityFramework.dll
+G:\CookBookWebsite\CookBookWebsite\bin\EntityFramework.SqlServer.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.AspNet.Identity.Core.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.Cookies.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.Facebook.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.Google.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.OAuth.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.Twitter.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Web.Infrastructure.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Newtonsoft.Json.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Owin.dll
+G:\CookBookWebsite\CookBookWebsite\bin\System.Web.Helpers.dll
+G:\CookBookWebsite\CookBookWebsite\bin\System.Web.Mvc.dll
+G:\CookBookWebsite\CookBookWebsite\bin\System.Web.Optimization.dll
+G:\CookBookWebsite\CookBookWebsite\bin\System.Web.Razor.dll
+G:\CookBookWebsite\CookBookWebsite\bin\System.Web.WebPages.Deployment.dll
+G:\CookBookWebsite\CookBookWebsite\bin\System.Web.WebPages.dll
+G:\CookBookWebsite\CookBookWebsite\bin\System.Web.WebPages.Razor.dll
+G:\CookBookWebsite\CookBookWebsite\bin\WebGrease.dll
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\CookBookWebsite\CookBookWebsite\bin\System.Web.Helpers.xml
+G:\CookBookWebsite\CookBookWebsite\bin\System.Web.Mvc.xml
+G:\CookBookWebsite\CookBookWebsite\bin\System.Web.Optimization.xml
+G:\CookBookWebsite\CookBookWebsite\bin\System.Web.Razor.xml
+G:\CookBookWebsite\CookBookWebsite\bin\System.Web.WebPages.xml
+G:\CookBookWebsite\CookBookWebsite\bin\System.Web.WebPages.Deployment.xml
+G:\CookBookWebsite\CookBookWebsite\bin\System.Web.WebPages.Razor.xml
+G:\CookBookWebsite\CookBookWebsite\bin\Antlr3.Runtime.pdb
+G:\CookBookWebsite\CookBookWebsite\bin\Newtonsoft.Json.xml
+G:\CookBookWebsite\CookBookWebsite\bin\EntityFramework.xml
+G:\CookBookWebsite\CookBookWebsite\bin\EntityFramework.SqlServer.xml
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.AspNet.Identity.Core.xml
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.xml
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.xml
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.Facebook.xml
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.Cookies.xml
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.OAuth.xml
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.Google.xml
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.Twitter.xml
+G:\CookBookWebsite\CookBookWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\System.Web.Helpers.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\System.Web.Mvc.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\System.Web.Optimization.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\System.Web.Razor.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\System.Web.WebPages.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\EntityFramework.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Host.SystemWeb.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Security.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Security.Facebook.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Security.Google.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Security.Twitter.resources.dll
+G:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+G:\CookBookWebsite\CookBookWebsite\obj\Debug\CookBookWebsite.dll
+G:\CookBookWebsite\CookBookWebsite\obj\Debug\CookBookWebsite.pdb
+G:\CookBookWebsite\CookBookWebsite\obj\Debug\CookBookWebsite.csprojResolveAssemblyReference.cache
