@@ -172,6 +172,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImageUploadController.cs" />
     <Compile Include="Controllers\MngArticleController.cs" />
+    <Compile Include="Controllers\MngCookBookController.cs" />
     <Compile Include="Controllers\MngUserController.cs" />
     <Compile Include="Controllers\UserCenterController.cs" />
     <Compile Include="Global.asax.cs">
@@ -186,6 +187,7 @@
     <Compile Include="Models\CookBookMaterial.cs" />
     <Compile Include="Models\CookBookOrder.cs" />
     <Compile Include="Models\CookBookStep.cs" />
+    <Compile Include="Models\CreateCookBookModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\User.cs" />
@@ -221,6 +223,7 @@
     <Content Include="Images\Index\slide-1.jpg" />
     <Content Include="Images\Index\slide-2.jpg" />
     <Content Include="Images\Index\slide-3.jpg" />
+    <Content Include="Images\login-background.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -277,6 +280,12 @@
     <Content Include="Views\UserCenter\UserInfoPartial.cshtml" />
     <Content Include="Views\UserCenter\UserArticlePartial.cshtml" />
     <Content Include="Views\UserCenter\CreateArticlePartial.cshtml" />
+    <Content Include="Views\UserCenter\UserCollectionPartial.cshtml" />
+    <Content Include="Views\MngCookBook\Create.cshtml" />
+    <Content Include="Views\MngCookBook\Delete.cshtml" />
+    <Content Include="Views\MngCookBook\Details.cshtml" />
+    <Content Include="Views\MngCookBook\Edit.cshtml" />
+    <Content Include="Views\MngCookBook\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

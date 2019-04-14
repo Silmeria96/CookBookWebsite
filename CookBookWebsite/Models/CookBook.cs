@@ -57,5 +57,8 @@ namespace CookBookWebsite.Models
 
         [Display(Name = "收藏用户列表")]
         public virtual ICollection<User> UserCollected { get; set; }
+
+        [Display(Name = "加入购物车用户列表")]
+        public virtual ICollection<User> UserShopCarted { get; set; }
     }
 }

@@ -76,6 +76,7 @@
 
 @section scripts{
     <script>
+        // 上传插件初始化
         $("#image-input").fileinput({
             language : 'zh',//设置文中文
             uploadUrl: "/ImageUpload/UploadCookBookImage",//图片上传的url，我这里对应的是后台struts配置好的的action方法
@@ -87,7 +88,7 @@
             autoReplaceBoolean: false,//选择图片时不清空原图片
         });
 
-        //异步上传成功结果处理
+        // 异步上传成功结果处理
         $("#image-input").on('fileuploaded', function (event, data, previewId, index) {
             if (data.response.flag) {
                 $("#Image").val(data.response.path);
@@ -97,7 +98,7 @@
             }
         });
 
-        //异步上传失败结果处理
+        // 异步上传失败结果处理
         $("#img").on('fileerror', function (event, data, msg) {
             alert("error");
         });

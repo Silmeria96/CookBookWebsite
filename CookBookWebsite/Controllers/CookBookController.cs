@@ -22,6 +22,12 @@ namespace CookBookWebsite.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
+            // 菜谱列表
+            ViewBag.CookBookList = db.CookBooks.ToList();
+
+            // 菜谱点赞排行榜
+            ViewBag.CookBookRankList = db.CookBooks.OrderByDescending(c => c.LikeNum).Take(5);
+
             return View();
         }
 
@@ -116,6 +122,104 @@ namespace CookBookWebsite.Controllers
                 rv["flag"] = false;
                 rv["msg"] = "发表评论发生了错误";
             }
+
+            return rv;
+        }
+
+        /// <summary>
+        /// 点赞
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public JObject DianZan()
+        {
+            JObject rv = new JObject();
+
+            int id = Convert.ToInt32(Request.Form["id"]);
+
+            CookBook target = db.CookBooks.Find(id);
+            
+            if(target != null)
+            {
+                if (target.LikeNum == null)
+                    target.LikeNum = 1;
+                else
+                    target.LikeNum += 1;
+
+                rv["flag"] = true;
+                rv["msg"] = "操作成功！";
+            }
+            else
+            {
+                rv["flag"] = false;
+                rv["msg"] = "操作失败！";
+            }
+
+            db.SaveChanges();
+
+            return rv;
+        }
+
+        /// <summary>
+        /// 收藏
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public JObject Collect()
+        {
+            JObject rv = new JObject();
+
+            int id = Convert.ToInt32(Request.Form["id"]);
+            string account = Convert.ToString(Session["UserAccount"]);
+
+            CookBook target = db.CookBooks.Find(id);
+            User user = db.Users.Where(a => a.Account == account).FirstOrDefault();
+
+            if (target != null && !string.IsNullOrEmpty(account))
+            {
+                user.CookBookCollected.Add(target);
+                rv["flag"] = true;
+                rv["msg"] = "操作成功！";
+            }
+            else
+            {
+                rv["flag"] = false;
+                rv["msg"] = "操作失败！";
+            }
+
+            db.SaveChanges();
+
+            return rv;
+        }
+
+        /// <summary>
+        /// 加入购物车
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public JObject AddToCart()
+        {
+            JObject rv = new JObject();
+
+            int id = Convert.ToInt32(Request.Form["id"]);
+            string account = Convert.ToString(Session["UserAccount"]);
+
+            CookBook target = db.CookBooks.Find(id);
+            User user = db.Users.Where(a => a.Account == account).FirstOrDefault();
+
+            if (target != null && string.IsNullOrEmpty(account))
+            {
+                user.CookBookShopCarted.Add(target);
+                rv["flag"] = true;
+                rv["msg"] = "操作成功！";
+            }
+            else
+            {
+                rv["flag"] = false;
+                rv["msg"] = "操作失败！";
+            }
+
+            db.SaveChanges();
 
             return rv;
         }

@@ -52,19 +52,45 @@
 <div class="row">
     <div class="col-xs-12">
         <div class="page-header">
-            <h1>文章列表</h1>
+            <h1>最新菜谱</h1>
         </div>
     </div>
     @{
-        foreach (var item in ViewBag.CookBooks)
+        if (ViewBag.CookBooks != null)
         {
-            <div class="col-sm-6 col-md-3">
-                <a href="/CookBook/Detail?id=@item.ID" class="thumbnail cookbook-item">
-                    <img src=@item.Image alt="Article" />
-                    <h3>@item.Title</h3>
-                    <p>@item.SubTitle</p>
-                </a>
-            </div>
+            foreach (var item in ViewBag.CookBooks)
+            {
+                <div class="col-sm-6 col-md-3">
+                    <a href="/CookBook/Detail?id=@item.ID" class="thumbnail cookbook-item">
+                        <img src=@item.Image alt="Article" />
+                        <h3>@item.Title</h3>
+                        <p>@item.SubTitle</p>
+                    </a>
+                </div>
+            }
+        }
+    }
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="page-header">
+            <h1>最新文章</h1>
+        </div>
+    </div>
+    @{
+        if (ViewBag.Articles != null)
+        {
+            foreach (var item in ViewBag.Articles)
+            {
+                <div class="col-sm-6 col-md-3">
+                    <a href="/CookBook/Detail?id=@item.ID" class="thumbnail cookbook-item">
+                        <img src=@item.Image alt="Article" />
+                        <h3>@item.Title</h3>
+                        <p>@item.SubTitle</p>
+                    </a>
+                </div>
+            }
         }
     }
 </div>

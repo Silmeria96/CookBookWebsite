@@ -3,5 +3,64 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<style>
+    .cookbook-item {
+        text-align: center;
+    }
+
+    .cookbook-item-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .cookbook-rank-list .cookbook-item-img{
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+<div class="row">
+    <div class="col-sm-12 col-md-9">
+        <div class="row">
+            <h2>菜谱列表</h2>
+            @{
+                if (ViewBag.CookBookList != null)
+                {
+                    foreach (var item in ViewBag.CookBookList)
+                    {
+                        <div class="col-sm-6 col-md-3">
+                            <a href="/CookBook/Detail?id=@item.ID" class="thumbnail cookbook-item">
+                                <img class="cookbook-item-img" src=@item.Image alt="Article" />
+                                <h3>@item.Title</h3>
+                                <p>@item.SubTitle</p>
+                            </a>
+                        </div>
+                    }
+                }
+            }
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-3">
+        <div class="cookbook-rank-list">
+            <div class="row">
+                <h2>点赞排行榜</h2>
+                @{
+                    if (ViewBag.CookBookRankList != null)
+                    {
+                        foreach (var item in ViewBag.CookBookRankList)
+                        {
+                            <div class="col-sm-12">
+                                <a href="/CookBook/Detail?id=@item.ID" class="thumbnail cookbook-item">
+                                    <img class="cookbook-item-img" src=@item.Image alt="Article" />
+                                    <h3>@item.Title</h3>
+                                    <p>@item.SubTitle</p>
+                                </a>
+                            </div>
+                        }
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
 

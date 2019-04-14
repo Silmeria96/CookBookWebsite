@@ -15,9 +15,6 @@
             @Html.DisplayNameFor(model => model.Account)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Password)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
         <th>
@@ -38,13 +35,19 @@
             @Html.DisplayFor(modelItem => item.Account)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Password)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Sex)
+            @{
+                if (item.Sex == 0)
+                {
+                    <span>男</span>
+                }
+                else
+                {
+                    <span>女</span>
+                }
+            }
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Birthday)

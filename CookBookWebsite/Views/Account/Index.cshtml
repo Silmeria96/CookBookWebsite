@@ -4,37 +4,57 @@
 }
 
 <style>
-    .login-container{
+    body {
+        background: url("../../Images/login-background.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    .login-container {
         margin-top: 30px;
+    }
+
+    .login-wrap {
+        padding: 30px;
+        min-height: 400px;
+        border: 3px solid whitesmoke;
+        border-radius: 5px;
+        background: #ffffff;
+    }
+
+    .login-wrap .login-title{
+        text-align: center;
     }
 </style>
 
 <div class="login-container">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <h3>@ViewBag.Message</h3>
-            <form class="form-horizontal" role="form" action="/Account/TryLogin" method="post">
-                <div class="form-group">
-                    <label for="firstname" class="col-sm-2 control-label">帐号</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="account" name="account"
-                               placeholder="请输入帐号">
+    <div class="login-wrap col-sm-10 col-md-6 col-sm-offset-1 col-md-offset-3">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h1 class="login-title">登录</h1>
+                <h3>@ViewBag.Message</h3>
+                <form class="form-horizontal" role="form" action="/Account/TryLogin" method="post">
+                    <div class="form-group">
+                        <label for="firstname" class="col-sm-2 control-label">帐号</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="account" name="account"
+                                   placeholder="请输入帐号">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="lastname" class="col-sm-2 control-label">密码</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="password" name="password"
-                               placeholder="请输入密码">
+                    <div class="form-group">
+                        <label for="lastname" class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="password" name="password"
+                                   placeholder="请输入密码">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-default btn-block">登录</button>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default btn-block">登录</button>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
 
+            </div>
         </div>
     </div>
 </div>

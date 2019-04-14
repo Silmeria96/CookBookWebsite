@@ -1,0 +1,173 @@
+﻿@model CookBookWebsite.Models.CookBook
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("CreateCookBook", "MngCookBook"))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>CookBook</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SubTitle, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SubTitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SubTitle, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Image, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">上传图片</label>
+            <div class="col-md-6" style="max-width:380px;">
+                <input id="image-input" type="file" name="img" class="form-control file" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Content, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NeedPayment, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.NeedPayment)
+                    @Html.ValidationMessageFor(model => model.NeedPayment, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div id="cookbook-step-area">
+            <div class="row" id="step-row">
+                <h4>菜谱步骤</h4>
+                <button id="btnAddStep">添加步骤</button>
+                <button id="btnDeleteAllStep">清空步骤</button>
+                <hr />
+                <div class="cookbook-step-list" id="step-list">
+                    <div class="step-item">
+                        <div class="form-group">
+                            <div class="control-label col-md-2">
+                                <label>步骤内容：</label>
+                            </div>
+                            <div class="col-md-9">
+                                <textarea class="form-control step-content-input" rows="3" name="Steps[0].Content" value="" placeholder="请输入步骤信息"></textarea>
+                            </div>
+                            <div class="col-md-1">
+                                <button class="btnDeleteStep"><span class="glyphicon glyphicon-remove"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        $(function () {
+            // 上传插件初始化
+            $("#image-input").fileinput({
+                language: 'zh',//设置文中文
+                uploadUrl: "/ImageUpload/UploadCookBookImage",//图片上传的url，我这里对应的是后台struts配置好的的action方法
+                showCaption: true,//显示标题
+                showRemove: true, //显示移除按钮
+                uploadAsync: true,//默认异步上传
+                showPreview: false,//是否显示预览
+                textEncoding: "UTF-8",//文本编码
+                autoReplaceBoolean: false,//选择图片时不清空原图片
+            });
+
+            // 异步上传成功结果处理
+            $("#image-input").on('fileuploaded', function (event, data, previewId, index) {
+                if (data.response.flag) {
+                    $("#Image").val(data.response.path);
+                }
+                else {
+                    alert(data.response.msg);
+                }
+            });
+
+            // 异步上传失败结果处理
+            $("#img").on('fileerror', function (event, data, msg) {
+                alert("error");
+            });
+        })
+    </script>
+
+    <script>
+        $(function () {
+            // 添加步骤
+            $("#cookbook-step-area").on("click", "#btnAddStep", function (e) {
+                e.preventDefault();
+                var step_count = $(".step-item").length;
+                var step_input = '<div class="step-item">'
+                        + '<div class="form-group">'
+                            + '<div class="control-label col-md-2">'
+                                + '<label>步骤内容：</label>'
+                            + '</div>'
+                            + '<div class="col-md-9">'
+                                + '<textarea class="form-control step-content-input" rows="3" name="Steps[' + step_count + '].Content" value="" placeholder="请输入步骤信息" ></textarea>'
+                            + '</div>'
+                            + '<div class="col-md-1">'
+                                + '<button class="btnDeleteStep"><span class="glyphicon glyphicon-remove"></span></button>'
+                            + '</div>'
+                        + '</div>'
+                    + '</div>';
+                $("#step-list").append(step_input);
+            });
+
+            // 删除步骤
+            $("#cookbook-step-area").on("click", ".btnDeleteStep", function (e) {
+                e.preventDefault();
+                var step_item = $(this).parents(".step-item").eq(0);
+                step_item.remove();
+            });
+
+            // 删除所有步骤
+            $("#cookbook-step-area").on("click", "#btnDeleteAllStep", function (e) {
+                e.preventDefault();
+                $(".step-item").remove();
+            });
+        })
+    </script>
+}

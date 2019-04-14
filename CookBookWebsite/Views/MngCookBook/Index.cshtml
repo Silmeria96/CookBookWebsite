@@ -1,0 +1,85 @@
+﻿@model IEnumerable<CookBookWebsite.Models.CookBook>
+
+@{
+    ViewBag.Title = "Index";
+    ViewBag.ModuleTitle = "菜谱列表";
+}
+
+<style>
+    th {
+        background: -webkit-linear-gradient(top,#f9f9f9,#e3e4e6) !important; /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(top,#f9f9f9,#e3e4e6) !important; /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(top,#f9f9f9,#e3e4e6) !important; /* Firefox 3.6 - 15 */
+        background: linear-gradient(top,#f9f9f9,#e3e4e6) !important; /* 标准的语法 */
+        text-align: center;
+    }
+
+    .operation-td{
+        text-align: center;
+    }
+
+    .img-thumbnail{
+        width: 150px;
+        height:150px;
+    }
+</style>
+
+<h2>@ViewBag.ModuleTitle</h2>
+
+<p>
+    @Html.ActionLink("新增", "Create", new { }, new { @class = "btn btn-default" })
+</p>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NeedPayment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LikeNum)
+        </th>
+        <th>
+            更多操作
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubTitle)
+        </td>
+        <td>
+            <img class="img-thumbnail" src=@item.Image alt="Alternate Text" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NeedPayment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LikeNum)
+        </td>
+        <td class="operation-td">
+            @Html.ActionLink("编辑", "Edit", new { id=item.ID }, new { @class = "btn btn-default" })
+            @Html.ActionLink("查看详情", "Details", new { id=item.ID }, new { @class = "btn btn-default" })
+            @Html.ActionLink("删除", "Delete", new { id=item.ID }, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+}
+
+</table>

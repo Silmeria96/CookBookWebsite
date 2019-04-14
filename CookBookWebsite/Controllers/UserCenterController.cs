@@ -43,6 +43,25 @@ namespace CookBookWebsite.Controllers
         }
 
         /// <summary>
+        /// 我的收藏
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult UserCollectionPartial()
+        {
+            string account = Convert.ToString(Session["UserAccount"]);
+
+            var user = db.Users.Where(a => a.Account == account).FirstOrDefault();
+
+            if(user != null)
+            {
+                var collections = user.CookBookCollected.ToList();
+                return PartialView(collections);
+            }
+
+            return RedirectToAction("Index","Login");
+        }
+
+        /// <summary>
         /// 订单模块
         /// </summary>
         /// <returns></returns>
