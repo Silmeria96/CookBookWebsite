@@ -173,6 +173,8 @@
     <Compile Include="Controllers\ImageUploadController.cs" />
     <Compile Include="Controllers\MngArticleController.cs" />
     <Compile Include="Controllers\MngCookBookController.cs" />
+    <Compile Include="Controllers\MngCookBookMaterialController.cs" />
+    <Compile Include="Controllers\MngCookBookStepController.cs" />
     <Compile Include="Controllers\MngUserController.cs" />
     <Compile Include="Controllers\UserCenterController.cs" />
     <Compile Include="Global.asax.cs">
@@ -286,6 +288,16 @@
     <Content Include="Views\MngCookBook\Details.cshtml" />
     <Content Include="Views\MngCookBook\Edit.cshtml" />
     <Content Include="Views\MngCookBook\Index.cshtml" />
+    <Content Include="Views\MngCookBookStep\Create.cshtml" />
+    <Content Include="Views\MngCookBookStep\Delete.cshtml" />
+    <Content Include="Views\MngCookBookStep\Details.cshtml" />
+    <Content Include="Views\MngCookBookStep\Edit.cshtml" />
+    <Content Include="Views\MngCookBookStep\Index.cshtml" />
+    <Content Include="Views\MngCookBookMaterial\Create.cshtml" />
+    <Content Include="Views\MngCookBookMaterial\Delete.cshtml" />
+    <Content Include="Views\MngCookBookMaterial\Details.cshtml" />
+    <Content Include="Views\MngCookBookMaterial\Edit.cshtml" />
+    <Content Include="Views\MngCookBookMaterial\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

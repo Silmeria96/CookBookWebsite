@@ -26,7 +26,7 @@ namespace CookBookWebsite.Models
         [Display(Name = "关联菜谱")]
         public int CookBookID { get; set; }
 
-
+        [Display(Name = "关联菜谱")]
         public virtual CookBook CookBook { get; set; }
     }
 }

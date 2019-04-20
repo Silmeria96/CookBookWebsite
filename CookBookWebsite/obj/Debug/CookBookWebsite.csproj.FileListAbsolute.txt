@@ -258,6 +258,5 @@ H:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Security.Facebook.
 H:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Security.Google.resources.dll
 H:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Security.Twitter.resources.dll
 H:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-H:\CookBookWebsite\CookBookWebsite\obj\Debug\CookBookWebsite.csprojResolveAssemblyReference.cache
 H:\CookBookWebsite\CookBookWebsite\obj\Debug\CookBookWebsite.dll
 H:\CookBookWebsite\CookBookWebsite\obj\Debug\CookBookWebsite.pdb
