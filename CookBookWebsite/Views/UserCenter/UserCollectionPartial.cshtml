@@ -1,13 +1,19 @@
 ﻿@model IEnumerable<CookBookWebsite.Models.CookBook>
 
 <style>
+    .collection-row{
+        margin: 0;
+    }
     .collect-item-img{
         width: 100px;
         height: 100px;
     }
 </style>
 
-<div class="row">
+<div class="row collection-row">
+    <h4>我的收藏</h4>
+
+    <hr />
     @foreach (var item in Model)
     {
         <div class="col-sm-6 col-md-3">
@@ -22,3 +28,4 @@
         </div>
     }
 </div>
+

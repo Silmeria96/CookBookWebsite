@@ -1,4 +1,5 @@
 ﻿using CookBookWebsite.Models;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,6 +44,29 @@ namespace CookBookWebsite.Controllers
         }
 
         /// <summary>
+        /// 账户充值
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult UserCharge()
+        {
+            string current_account = Session["UserAccount"].ToString();
+            var current_user = db.Users.Where(a => a.Account == current_account).FirstOrDefault();
+
+            ViewBag.CurrentMoney = current_user.Money;
+
+            return PartialView();
+        }
+
+        /// <summary>
+        /// 修改密码
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult UserChangePasswordPartial()
+        {
+            return PartialView();
+        }
+
+        /// <summary>
         /// 我的收藏
         /// </summary>
         /// <returns></returns>
@@ -62,16 +86,30 @@ namespace CookBookWebsite.Controllers
         }
 
         /// <summary>
-        /// 订单模块
+        /// 我的购物车
         /// </summary>
         /// <returns></returns>
-        public ActionResult UserOrderPartial()
+        public ActionResult UserShopCart()
         {
             return PartialView();
         }
 
         /// <summary>
-        /// 文章模块
+        /// 我购买的菜谱
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult UserCookBookShopCarted()
+        {
+            string current_account = Session["UserAccount"].ToString();
+            var current_user = db.Users.Where(a => a.Account == current_account).FirstOrDefault();
+
+            ViewBag.CookBookShopCarted = current_user.CookBookShopCarted.ToList();
+
+            return PartialView();
+        }
+
+        /// <summary>
+        /// 我的文章
         /// </summary>
         /// <returns></returns>
         public ActionResult UserArticlePartial()
@@ -88,8 +126,11 @@ namespace CookBookWebsite.Controllers
             }
         }
 
+
+
+
         /// <summary>
-        /// 创建文章模块
+        /// 创建文章表单
         /// </summary>
         /// <returns></returns>
         public ActionResult CreateArticlePartial()
@@ -107,7 +148,6 @@ namespace CookBookWebsite.Controllers
             }
         }
 
-
         /// <summary>
         /// 保存个人信息
         /// </summary>
@@ -119,6 +159,36 @@ namespace CookBookWebsite.Controllers
             db.Entry(origin_user).CurrentValues.SetValues(user);
             db.SaveChanges();
             return PartialView("UserInfoPartial", user);
+        }
+
+        /// <summary>
+        /// 尝试充值
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public JObject TryCharge(double money)
+        {
+            JObject rv = new JObject();
+
+            string current_account = Session["UserAccount"].ToString();
+            var current_user = db.Users.Where(a => a.Account == current_account).FirstOrDefault();
+
+            current_user.Money += money;
+            int result = db.SaveChanges();
+
+            if(result > 0)
+            {
+                rv["flag"] = true;
+                rv["msg"] = "充值成功！";
+                rv["newMoney"] = current_user.Money;
+            }
+            else
+            {
+                rv["flag"] = false;
+                rv["msg"] = "充值失败！";
+            }
+
+            return rv;
         }
 
         /// <summary>

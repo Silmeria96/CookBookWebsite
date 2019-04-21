@@ -10,18 +10,29 @@ namespace CookBookWebsite.Models
     {
         public CookBookDbContext() : base("CookBookDB") { }
 
+
+
         public DbSet<User> Users { get; set; }
 
+
+
         public DbSet<CookBook> CookBooks { get; set; }
+
+        public DbSet<CookBookCategory> CookBookCategories { get; set; }
 
         public DbSet<CookBookMaterial> CookBookMaterials { get; set; }
 
         public DbSet<CookBookStep> CookBookSteps { get; set; }
 
+        public DbSet<CookBookComment> CookBookComments { get; set; }
+
         public DbSet<CookBookOrder> CookBookOrders { get; set; }
+
+
 
         public DbSet<Article> Articles { get; set; }
 
-        public DbSet<CookBookComment> CookBookComments { get; set; }
+        public DbSet<ArticleCategory> ArticleCategories { get; set; }
+        
     }
 }

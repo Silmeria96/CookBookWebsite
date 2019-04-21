@@ -1,0 +1,56 @@
+﻿
+<form class="form-horizontal" action="/" method="post">
+
+    <h4>账户充值</h4>
+
+    <hr />
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="money">账户余额：</label>
+        <div class="col-md-10">
+            <p id="current-money" style="line-height:30px;"><span>@ViewBag.CurrentMoney</span>元</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="money">充值金额：</label>
+        <div class="col-md-10">
+            <input class="form-control" type="number" name="money" id="money" value="0" placeholder="请输入充值金额" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" value="充值" id="btnCharge" class="btn btn-primary btn-block" />
+        </div>
+    </div>
+
+</form>
+
+<script>
+        $(function () {
+
+            $("#btnCharge").click(function () {
+                $.ajax({
+                    type: 'POST',
+                    url: '/UserCenter/TryCharge',
+                    data: {
+                        money: $("#money").val()
+                    },
+                    success: function (data) {
+                        var result = eval('(' + data + ')');
+                        if (result.flag) {
+                            alert("充值成功！");
+                            $("#current-money").text(result.newMoney + '元');
+                        }
+                        $("#money").val(0);
+                    },
+                    error: function (e) {
+                        alert("充值过程中发生了错误，请联系管理员");
+                        console.log(e);
+                    }
+                })
+            });
+
+        })
+</script>

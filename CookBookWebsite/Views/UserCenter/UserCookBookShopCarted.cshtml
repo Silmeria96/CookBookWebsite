@@ -1,0 +1,21 @@
+﻿
+<div class="row">
+
+    <h4>我的购物车</h4>
+
+    <hr />
+
+    @{
+        if (ViewBag.CookBookShopCarted != null)
+        {
+            foreach (var item in ViewBag.CookBookShopCarted)
+            {
+                <div class="col-sm-12 col-md-4">
+                    <img src="@item.Image" alt="Alternate Text" />
+                    <p>@item.Title</p>
+                </div>
+            }
+        }
+    }
+
+</div>

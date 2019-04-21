@@ -54,7 +54,27 @@ namespace CookBookWebsite.Models
             ";
             yuxiangrousi.Image = "/Images/CookBook/yuxiangrousi.jpg";
             yuxiangrousi.NeedPayment = false;
+            yuxiangrousi.Price = 10.00;
+            yuxiangrousi.LikeNum = 0;
             context.CookBooks.Add(yuxiangrousi);
+
+            context.SaveChanges();
+
+            #endregion
+
+            #region 菜谱分类
+
+            CookBookCategory jiachangcai = new CookBookCategory();
+            jiachangcai.Name = "家常菜";
+            jiachangcai.RelatedCookBooks = new List<CookBook>();
+            jiachangcai.RelatedCookBooks.Add(yuxiangrousi);
+            context.CookBookCategories.Add(jiachangcai);
+
+            CookBookCategory chuancai = new CookBookCategory();
+            chuancai.Name = "川菜";
+            chuancai.RelatedCookBooks = new List<CookBook>();
+            chuancai.RelatedCookBooks.Add(yuxiangrousi);
+            context.CookBookCategories.Add(chuancai);
 
             context.SaveChanges();
 

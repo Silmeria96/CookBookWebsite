@@ -60,16 +60,36 @@
 </style>
 
 
+<!--页面容器-->
 <div class="row main-row">
+
+    <!--菜谱信息-->
     <div class="col-md-8">
+
+        <!--菜谱基础信息-->
         <div class="cookbook-basic-info">
+
+            <!--菜谱标题-->
             <h1 id="cookbook-title">@Model.Title</h1>
+
+            <!--菜谱标签-->
+            <h4>
+                标签：
+                @foreach (var category in Model.Categories)
+                {
+                <span>@category.Name</span>
+                }
+            </h4>
+
             <img class="img-responsive cookbook-img" style="max-height:400px;" src=@Model.Image alt="Thumbnail" />
+
             <p>@Model.Content</p>
+
+            <!--点赞操作栏-->
             <div class="btn-group btn-group-lg">
                 <button type="button" class="btn btn-default" id="btnDianZan">
                     <span class="glyphicon glyphicon-heart"></span>
-                    <span>赞一个</span>
+                    <span>赞一个(<span id="like-num">@Model.LikeNum</span>)</span>
                 </button>
                 <button type="button" class="btn btn-default" id="btnCollect">
                     <span class="glyphicon glyphicon-star-empty"></span>
@@ -80,7 +100,10 @@
                     <span>加入购物车</span>
                 </button>
             </div>
+
         </div>
+
+        <!--菜谱食材-->
         <div class="cookbook-material-info">
             <h3>食材明细</h3>
             <div class="material-level-3">
@@ -92,17 +115,24 @@
                     </div>
                     <div class="panel-body">
                         @{
-                            foreach (var material in Model.Materials)
+                            if (!Model.NeedPayment || Model.NeedPayment && ViewBag.Permission != null && ViewBag.Permission == true)
                             {
-                                if (material.Level == 3)
+                                foreach (var material in Model.Materials)
                                 {
-                                    <div class="cookbook-material-item">
-                                        <p class="name">@material.Name</p>
-                                        <p class="value">
-                                            <span class="amount">@material.Amount</span>
-                                        </p>
-                                    </div>
+                                    if (material.Level == 3)
+                                    {
+                                        <div class="cookbook-material-item">
+                                            <p class="name">@material.Name</p>
+                                            <p class="value">
+                                                <span class="amount">@material.Amount</span>
+                                            </p>
+                                        </div>
+                                    }
                                 }
+                            }
+                            else
+                            {
+                                <h3>该菜谱为付费菜谱，请购买后查看</h3>
                             }
                         }
                     </div>
@@ -117,17 +147,24 @@
                     </div>
                     <div class="panel-body">
                         @{
-                            foreach (var material in Model.Materials)
+                            if (!Model.NeedPayment || Model.NeedPayment && ViewBag.Permission != null && ViewBag.Permission == true)
                             {
-                                if (material.Level == 2)
+                                foreach (var material in Model.Materials)
                                 {
-                                    <div class="cookbook-material-item">
-                                        <p class="name">@material.Name</p>
-                                        <p class="value">
-                                            <span class="amount">@material.Amount</span>
-                                        </p>
-                                    </div>
+                                    if (material.Level == 2)
+                                    {
+                                        <div class="cookbook-material-item">
+                                            <p class="name">@material.Name</p>
+                                            <p class="value">
+                                                <span class="amount">@material.Amount</span>
+                                            </p>
+                                        </div>
+                                    }
                                 }
+                            }
+                            else
+                            {
+                                <h3>该菜谱为付费菜谱，请购买后查看</h3>
                             }
                         }
                     </div>
@@ -142,43 +179,62 @@
                     </div>
                     <div class="panel-body">
                         @{
-                            foreach (var material in Model.Materials)
+                            if (!Model.NeedPayment || Model.NeedPayment && ViewBag.Permission != null && ViewBag.Permission == true)
                             {
-                                if (material.Level == 1)
+                                foreach (var material in Model.Materials)
                                 {
-                                    <div class="cookbook-material-item">
-                                        <p class="name">@material.Name</p>
-                                        <p class="value">
-                                            <span class="amount">@material.Amount</span>
-                                        </p>
-                                    </div>
+                                    if (material.Level == 1)
+                                    {
+                                        <div class="cookbook-material-item">
+                                            <p class="name">@material.Name</p>
+                                            <p class="value">
+                                                <span class="amount">@material.Amount</span>
+                                            </p>
+                                        </div>
+                                    }
                                 }
+                            }
+                            else
+                            {
+                                <h3>该菜谱为付费菜谱，请购买后查看</h3>
                             }
                         }
                     </div>
                 </div>
             </div>
         </div>
+
+        <!--菜谱步骤-->
         <div class="cookbook-step-info">
             <h3><span>@Model.Title</span>的做法步骤</h3>
             @{
-                foreach (var step in Model.Steps)
+                if (!Model.NeedPayment || Model.NeedPayment && ViewBag.Permission != null && ViewBag.Permission == true)
                 {
-                    <div class="cookbook-step-item">
-                        <div class="row">
-                            <div class="col-xs-4">
-                                <img class="step-img img-responsive center-block" src=@step.ImageUrl alt="Alternate Text" />
-                            </div>
-                            <div class="col-xs-8">
-                                <h3 class="step-order">@step.OrderID</h3>
-                                <p class="step-text">@step.Content</p>
+                    foreach (var step in Model.Steps)
+                    {
+                        <div class="cookbook-step-item">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img class="step-img img-responsive center-block" src=@step.ImageUrl alt="Alternate Text" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <h3 class="step-order">@step.OrderID</h3>
+                                    <p class="step-text">@step.Content</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    }
+                }
+                else
+                {
+                    <h4>该菜谱为付费菜谱，请先购买</h4>
                 }
             }
         </div>
+
     </div>
+
+    <!--排行榜-->
     <div class="col-md-4">
         <h3>最受欢迎的菜谱排行榜</h3>
         <div class="cookbook-ranking-list">
@@ -196,7 +252,10 @@
             </div>
         </div>
     </div>
+
 </div>
+
+<!--评论区域-->
 <div class="row comment-row">
     <div class="col-md-12">
         <h3>最新评论</h3>
@@ -225,33 +284,33 @@
     </div>
     <div class="col-md-12">
         <div id="comment-list">
-            @{
-                foreach (var comment in Model.Comments)
-                {
-                    <div class="comment-item">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-xs-2">
-                                        <div class="comment-left">
-                                            <img class="comment-user-head" src="/Images/Index/cookbook-1.jpg" alt="Alternate Text" />
-                                            <p>@comment.CreateUser.Name</p>
-                                        </div>
+            @foreach (var comment in Model.Comments)
+            {
+                <div class="comment-item">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-2">
+                                    <div class="comment-left">
+                                        <img class="comment-user-head" src="/Images/Index/cookbook-1.jpg" alt="Alternate Text" />
+                                        <p>@comment.CreateUser.Name</p>
                                     </div>
-                                    <div class="col-xs-10">
-                                        <div class="comment-right">
-                                            <p>@comment.Content</p>
-                                        </div>
+                                </div>
+                                <div class="col-xs-10">
+                                    <div class="comment-right">
+                                        <p>@comment.Content</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                }
+                </div>
             }
         </div>
     </div>
 </div>
+
+
 
 @section scripts{
     <script>
@@ -337,10 +396,14 @@
                     },
                     success: function (data) {
                         var result = eval('(' + data + ')');
-                        if (result.flag)
+                        if (result.flag) {
+                            var source_like_num = $("#like-num").text();
+                            $("#like-num").text(parseInt(source_like_num) + 1);
                             alert("操作成功！");
-                        else
+                        }
+                        else {
                             alert("操作失败！");
+                        }
                     },
                     error: function (error) {
                         alert("发生错误，请与管理员联系");

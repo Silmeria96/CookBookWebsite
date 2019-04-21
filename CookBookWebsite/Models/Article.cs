@@ -36,6 +36,9 @@ namespace CookBookWebsite.Models
         [Display(Name = "创建人")]
         public int CreateUserID { get; set; }
 
+        [Display(Name = "点赞量")]
+        public int LikeNum { get; set; }
+
 
 
         public virtual User CreateUser { get; set; }

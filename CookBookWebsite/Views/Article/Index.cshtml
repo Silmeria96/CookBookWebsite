@@ -1,0 +1,43 @@
+﻿@model IEnumerable<CookBookWebsite.Models.Article>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-sm-12 col-md-9">
+        <div class="row">
+            <h2>文章列表</h2>
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-6 col-md-3">
+                    <a href="/Article/Detail?id=@item.ID" class="thumbnail article-item">
+                        <img class="article-item-img" src=@item.Image alt="Article" />
+                        <h3>@item.Title</h3>
+                        <p>@item.SubTitle</p>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-3">
+        <div class="row">
+            <h2>排行榜</h2>
+            @{
+                if (ViewBag.ArticleRankList != null)
+                {
+                    foreach (var item in ViewBag.ArticleRankList)
+                    {
+                        <div class="col-sm-12">
+                            <a href="/CookBook/Detail?id=@item.ID" class="thumbnail article-item">
+                                <img class="article-item-img" src=@item.Image alt="Article" />
+                                <h3>@item.Title</h3>
+                                <p>@item.SubTitle</p>
+                            </a>
+                        </div>
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>

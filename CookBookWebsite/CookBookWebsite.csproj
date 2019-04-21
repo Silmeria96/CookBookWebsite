@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\CookBookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImageUploadController.cs" />
@@ -182,7 +183,9 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Article.cs" />
+    <Compile Include="Models\ArticleCategory.cs" />
     <Compile Include="Models\CookBook.cs" />
+    <Compile Include="Models\CookBookCategory.cs" />
     <Compile Include="Models\CookBookComment.cs" />
     <Compile Include="Models\CookBookDbContext.cs" />
     <Compile Include="Models\CookBookDbInitializer.cs" />
@@ -206,7 +209,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\banner-usercenter.jpg" />
     <Content Include="Images\CookBookStep\yuxiangrousi-step1.jpg" />
     <Content Include="Images\CookBookStep\yuxiangrousi-step2.jpg" />
     <Content Include="Images\CookBookStep\yuxiangrousi-step3.jpg" />
@@ -214,6 +216,7 @@
     <Content Include="Images\CookBookStep\yuxiangrousi-step5.jpg" />
     <Content Include="Images\CookBookStep\yuxiangrousi-step6.jpg" />
     <Content Include="Images\CookBook\yuxiangrousi.jpg" />
+    <Content Include="Images\default-user-head.jpg" />
     <Content Include="Images\Index\cookbook-1.jpg" />
     <Content Include="Images\Index\cookbook-2.jpg" />
     <Content Include="Images\Index\cookbook-3.jpg" />
@@ -226,6 +229,8 @@
     <Content Include="Images\Index\slide-2.jpg" />
     <Content Include="Images\Index\slide-3.jpg" />
     <Content Include="Images\login-background.jpg" />
+    <Content Include="Images\usercenter-banner.jpg" />
+    <Content Include="Musics\Nyan_Cat.mp3" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -233,6 +238,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.jplayer.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -298,6 +304,11 @@
     <Content Include="Views\MngCookBookMaterial\Details.cshtml" />
     <Content Include="Views\MngCookBookMaterial\Edit.cshtml" />
     <Content Include="Views\MngCookBookMaterial\Index.cshtml" />
+    <Content Include="Views\Article\Index.cshtml" />
+    <Content Include="Views\Article\Detail.cshtml" />
+    <Content Include="Views\UserCenter\UserChangePasswordPartial.cshtml" />
+    <Content Include="Views\UserCenter\UserCharge.cshtml" />
+    <Content Include="Views\UserCenter\UserCookBookShopCarted.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

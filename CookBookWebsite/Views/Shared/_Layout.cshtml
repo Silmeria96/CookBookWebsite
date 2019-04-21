@@ -9,6 +9,8 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+
+    <!--网站顶部导航栏-->
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -23,7 +25,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("首页", "Index", "Home")</li>
                     <li>@Html.ActionLink("精选菜谱", "Index", "CookBook")</li>
-                    <li>@Html.ActionLink("交流社区", "Index", "Home")</li>
+                    <li>@Html.ActionLink("交流社区", "Index", "Article")</li>
                     <li>@Html.ActionLink("个人中心", "Index", "UserCenter")</li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -41,10 +43,15 @@
                         </ul>
                     </li>
                 </ul>
+                <audio src="~/Musics/Nyan_Cat.mp3" controls="controls">
+                    Your browser does not support the audio element.
+                </audio>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
+
+    <!--页面容器-->
     <div class="container body-content">
         @RenderBody()
     </div>

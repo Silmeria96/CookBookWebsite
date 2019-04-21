@@ -39,12 +39,12 @@ namespace CookBookWebsite.Controllers
             if (user == null)
             {
                 ViewBag.Message = "该用户不存在";
-                return View("Index", "Account");
+                return View("Index");
             }
             else if (user.Password != password)
             {
                 ViewBag.Message = "用户名或密码错误";
-                return View("Index", "Account");
+                return View("Index");
             }
             else
             {
@@ -109,6 +109,35 @@ namespace CookBookWebsite.Controllers
                 ViewBag.Message = "注册失败，请联系管理员";
                 return View();
             }
+        }
+
+        [HttpPost]
+        public ActionResult ChangePassword(ChangePasswordViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                string current_account = Session["UserAccount"].ToString();
+                var current_user = db.Users.Where(a => a.Account == current_account).FirstOrDefault();
+
+                if(model.OldPassword != current_user.Password)
+                {
+                    ViewBag.Message = "原始密码不正确";
+                }
+                else if (model.NewPassword != model.ConfirmPassword)
+                {
+                    ViewBag.Message = "新密码两次输入不一致";
+                }
+                else
+                {
+                    current_user.Password = model.ConfirmPassword;
+                    if(db.SaveChanges() > 0)
+                    {
+                        ViewBag.Message = "修改成功！";
+                    }
+                }
+            }
+
+            return PartialView("~/Views/UserCenter/UserChangePasswordPartial.cshtml");
         }
 
     }

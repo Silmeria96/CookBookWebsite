@@ -260,3 +260,4 @@ H:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Security.Twitter.r
 H:\CookBookWebsite\CookBookWebsite\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 H:\CookBookWebsite\CookBookWebsite\obj\Debug\CookBookWebsite.dll
 H:\CookBookWebsite\CookBookWebsite\obj\Debug\CookBookWebsite.pdb
+H:\CookBookWebsite\CookBookWebsite\obj\Debug\CookBookWebsite.csprojResolveAssemblyReference.cache

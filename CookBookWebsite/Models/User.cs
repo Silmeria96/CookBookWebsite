@@ -37,6 +37,10 @@ namespace CookBookWebsite.Models
         [DataType(DataType.MultilineText)]
         public string Introduction { get; set; }
 
+        [Display(Name = "账户余额")]
+        [ScaffoldColumn(false)]
+        public double Money { get; set; }
+
 
 
 

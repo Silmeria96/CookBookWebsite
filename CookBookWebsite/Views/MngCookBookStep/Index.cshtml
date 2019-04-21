@@ -2,19 +2,41 @@
 
 @{
     ViewBag.Title = "Index";
+    ViewBag.ModuleTitle = "菜谱步骤";
 }
 
-<h2>Index</h2>
+<style>
+    th {
+        background: -webkit-linear-gradient(top,#f9f9f9,#e3e4e6) !important; /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(top,#f9f9f9,#e3e4e6) !important; /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(top,#f9f9f9,#e3e4e6) !important; /* Firefox 3.6 - 15 */
+        background: linear-gradient(top,#f9f9f9,#e3e4e6) !important; /* 标准的语法 */
+        text-align: center;
+    }
+
+    .operation-td {
+        width: 230px;
+        text-align: center;
+    }
+
+    .img-thumbnail {
+        width: 150px;
+        height: 150px;
+    }
+</style>
+
+<h2>@ViewBag.ModuleTitle</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("新增", "Create", new { }, new { @class = "btn btn-default" })
 </p>
+
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CookBook.Title)
+        <th style="width:120px;">
+            所属菜谱
         </th>
-        <th>
+        <th style="width:50px;">
             @Html.DisplayNameFor(model => model.OrderID)
         </th>
         <th>
@@ -28,22 +50,22 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        <td style="text-align:center;">
             @Html.DisplayFor(modelItem => item.CookBook.Title)
         </td>
-        <td>
+        <td style="text-align:center;">
             @Html.DisplayFor(modelItem => item.OrderID)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ImageUrl)
+        <td style="width:150px;">
+            <img class="img-thumbnail" src="@item.ImageUrl" alt="Alternate Text" />
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Content)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.StepID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.StepID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.StepID })
+        <td class="operation-td">
+            @Html.ActionLink("编辑", "Edit", new { id = item.StepID }, new { @class = "btn btn-default" })
+            @Html.ActionLink("查看详情", "Details", new { id = item.StepID }, new { @class = "btn btn-default" })
+            @Html.ActionLink("删除", "Delete", new { id = item.StepID }, new { @class = "btn btn-default" })
         </td>
     </tr>
 }

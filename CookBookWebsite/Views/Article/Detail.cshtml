@@ -1,0 +1,37 @@
+﻿@model CookBookWebsite.Models.Article
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<style>
+    .article-img {
+        max-width: 300px;
+        border: 3px solid gray;
+    }
+</style>
+
+<div class="row">
+
+    <div class="col-sm-12 col-md-8">
+        <div class="row">
+            <h1 class="title">@Model.Title</h1>
+            <h3 class="subtitle">@Model.SubTitle</h3>
+            <p class="article-create-info">
+                <span class="create-date">@Model.CreateDate  </span>
+                <span class="author">作者：@Model.CreateUser.Name</span>
+            </p>
+        </div>
+        <div class="row">
+            <img class="article-img img-responsive" src="@Model.Image" alt="Alternate Text" />
+        </div>
+        <div class="row">
+            @Model.Content
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-md-4">
+        <h3>文章推荐</h3>
+    </div>
+
+</div>

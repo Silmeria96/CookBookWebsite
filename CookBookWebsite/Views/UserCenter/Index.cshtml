@@ -6,7 +6,8 @@
 <style>
     .userinfo-container {
         height: 150px;
-        background-color: antiquewhite;
+        background: url("/Images/usercenter-banner.jpg") no-repeat;
+        background-size: 100% 100%;
     }
 
     .userinfo-head {
@@ -27,7 +28,7 @@
         <div class="userinfo-container">
             <div class="row">
                 <div class="col-md-2 col-md-offset-1">
-                    <img class="userinfo-head" src="~/Images/Index/cookbook-1.jpg" alt="Alternate Text" />
+                    <img class="userinfo-head" src="~/Images/default-user-head.jpg" alt="Alternate Text" />
                 </div>
                 <div class="col-md-6">
                     <h4 class="userinfo-name">@Session["UserDisplayName"]</h4>
@@ -41,9 +42,11 @@
     <div class="col-md-2">
         <ul class="nav nav-pills nav-stacked">
             <li>@Ajax.ActionLink("个人中心", "UserInfoPartial", new AjaxOptions { UpdateTargetId = "partial-container", InsertionMode = InsertionMode.Replace, HttpMethod = "GET" })</li>
-            <li>@Ajax.ActionLink("修改密码", "UserPasswordPartial", new AjaxOptions { UpdateTargetId = "partial-container", InsertionMode = InsertionMode.Replace, HttpMethod = "GET" })</li>
+            <li>@Ajax.ActionLink("账户充值", "UserCharge", new AjaxOptions { UpdateTargetId = "partial-container", InsertionMode = InsertionMode.Replace, HttpMethod = "GET" })</li>
+            <li>@Ajax.ActionLink("修改密码", "UserChangePasswordPartial", new AjaxOptions { UpdateTargetId = "partial-container", InsertionMode = InsertionMode.Replace, HttpMethod = "GET" })</li>
             <li>@Ajax.ActionLink("我的收藏", "UserCollectionPartial", new AjaxOptions { UpdateTargetId = "partial-container", InsertionMode = InsertionMode.Replace, HttpMethod = "GET" })</li>
-            <li>@Ajax.ActionLink("我的订单", "UserOrderPartial", new AjaxOptions { UpdateTargetId = "partial-container", InsertionMode = InsertionMode.Replace, HttpMethod = "GET" })</li>
+            <li>@Ajax.ActionLink("我的购物车", "UserShopCart", new AjaxOptions { UpdateTargetId = "partial-container", InsertionMode = InsertionMode.Replace, HttpMethod = "GET" })</li>
+            <li>@Ajax.ActionLink("我购买的菜谱", "UserCookBookBuyed", new AjaxOptions { UpdateTargetId = "partial-container", InsertionMode = InsertionMode.Replace, HttpMethod = "GET" })</li>
             <li>@Ajax.ActionLink("我的文章", "UserArticlePartial", new AjaxOptions { UpdateTargetId = "partial-container", InsertionMode = InsertionMode.Replace, HttpMethod = "GET" })</li>
             <li>@Html.ActionLink("退出","Logout","Account")</li>
         </ul>

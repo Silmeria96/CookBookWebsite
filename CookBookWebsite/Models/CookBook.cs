@@ -36,12 +36,16 @@ namespace CookBookWebsite.Models
         [Display(Name = "是否付费")]
         public bool NeedPayment { get; set; }
 
+        [Display(Name = "菜谱价格")]
+        public double? Price { get; set; }
+
         [ReadOnly(true)]
         [Display(Name = "点赞量")]
         public int? LikeNum { get; set; }
 
 
-
+        [Display(Name = "菜谱分类")]
+        public virtual ICollection<CookBookCategory> Categories { get; set; }
 
         [Display(Name = "菜谱食材")]
         public virtual ICollection<CookBookMaterial> Materials { get; set; }

@@ -7,6 +7,10 @@
         text-decoration: none;
     }
 
+    a:visited, a:hover{
+        text-decoration: none;
+    }
+
     .floor.f1 {
         background: orange;
     }
@@ -26,8 +30,14 @@
         margin: 10px 5px;
         text-align: center;
     }
+
+    .cookbook-item-img{
+        width: 150px;
+        height: 150px;
+    }
 </style>
 
+<!--首页轮播图-->
 <div class="row">
     <div class="col-md-12">
         <div class="floor f1">
@@ -49,6 +59,7 @@
     </div>
 </div>
 
+<!--菜谱列表-->
 <div class="row">
     <div class="col-xs-12">
         <div class="page-header">
@@ -62,7 +73,7 @@
             {
                 <div class="col-sm-6 col-md-3">
                     <a href="/CookBook/Detail?id=@item.ID" class="thumbnail cookbook-item">
-                        <img src=@item.Image alt="Article" />
+                        <img class="cookbook-item-img" src=@item.Image alt="Article" />
                         <h3>@item.Title</h3>
                         <p>@item.SubTitle</p>
                     </a>
@@ -72,6 +83,7 @@
     }
 </div>
 
+<!--文章列表-->
 <div class="row">
     <div class="col-xs-12">
         <div class="page-header">
@@ -99,16 +111,20 @@
 @section Scripts{
     <script>
 
-        var mySwiper = new Swiper('.swiper-container', {
-            autoplay: true,
-            loop: true,
-            effect: 'fade',
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            scrollbar: {
-                el: '.swiper-scrollbar'
-            }
+        $(document).ready(function () {
+
+            var mySwiper = new Swiper('.swiper-container', {
+                autoplay: true,
+                loop: true,
+                effect: 'fade',
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                scrollbar: {
+                    el: '.swiper-scrollbar'
+                }
+            });
+
         });
 
     </script>
